@@ -20,7 +20,7 @@ def contains_url(text):
     url_pattern = re.compile(r'https?://\S+|www\.\S+')
     return bool(url_pattern.search(text))
 
-post_amount = random.randint(15, 20)
+post_amount = random.randint(25, 30)
 print (f"Post Amount: {post_amount}")
 
 @bot.event
@@ -33,7 +33,7 @@ async def on_message(message):
 
             if image_counter == post_amount:
                 image_counter = 0
-                post_amount = random.randint(15, 20)
+                post_amount = random.randint(25, 30)
                 print (f"Post Amount: {post_amount}")
                 await message.channel.send("jfc bro")
 
